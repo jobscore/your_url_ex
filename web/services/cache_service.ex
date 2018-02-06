@@ -14,7 +14,7 @@ defmodule YourUrlEx.CacheService do
   end
 
   def connection do
-    { :ok, conn } = Redix.start_link()
+    { :ok, conn } = Redix.start_link(host: System.get_env("REDIS_HOST"), port: 6379)
 
     conn
   end
