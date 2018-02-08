@@ -2,7 +2,7 @@ use Mix.Config
 
 config :your_url_ex, YourUrlEx.Endpoint,
   http: [port: 4000, compress: true],
-  url: [scheme: "http", host: 'localhost', port: 80],
+  url: [scheme: "http", host: System.get_env("HOST"), port: 80],
   secret_key_base: System.get_env("SECRET_KEY_BASE"),
   code_reloader: false,
   cache_static_manifest: "priv/static/manifest.json",
