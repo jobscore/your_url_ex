@@ -19,7 +19,7 @@ defmodule YourUrlEx.Mixfile do
   def application do
     [mod: {YourUrlEx, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :plug,
-                    :logger, :logger_file_backend, :gettext, :phoenix_ecto,
+                    :logger, :gettext, :phoenix_ecto,
                     :postgrex, :exq]]
   end
 
