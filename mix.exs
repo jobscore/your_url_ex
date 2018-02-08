@@ -19,7 +19,8 @@ defmodule YourUrlEx.Mixfile do
   def application do
     [mod: {YourUrlEx, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :plug,
-                    :logger, :gettext, :phoenix_ecto, :postgrex, :exq]]
+                    :logger, :logger_file_backend, :gettext, :phoenix_ecto,
+                    :postgrex, :exq]]
   end
 
   # Specifies which paths to compile per environment.

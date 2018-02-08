@@ -3,7 +3,7 @@ RUN cd /tmp \
   && curl -sL https://nodejs.org/dist/v8.9.4/node-v8.9.4-linux-x64.tar.xz -o node.tar.xz \
   && tar xf node.tar.xz \
   && cp -RT ./node*/ /usr/local/ \
-  && rm -rf /tmp/node*
+  && rm -rf /tmp/node* && mkdir -p /var/log/phoenix
 
 WORKDIR /app
 ENV AUTHORIZATION_TOKEN_SALT="YourUrlTokenSalt"

@@ -4,3 +4,5 @@ Dockerfile
 .env_example
 .gitignore
 .README.md
+logs/
+pgdata/

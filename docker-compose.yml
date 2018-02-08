@@ -1,9 +1,11 @@
 version: '3'
 services:
   web:
-    image: nginx:latest
+    image: nginx:1.13.8-alpine
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./logs/nginx:/var/log/nginx
+      - ./logs/app:/var/log/phoenix
     links:
       - app
     ports:
@@ -30,5 +32,7 @@ services:
     environment:
       POSTGRES_PASSWORD: password
       POSTGRES_DB: your-urls-ex
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
   redis:
     image: redis:3.2-alpine
